@@ -102,6 +102,22 @@ __Arguments__
 * `key` - key to use as property name.
 * `value` - The value to assign to the new property.
 
+
+__Examples__
+
+```js
+var store = getMirror();
+
+store.setItem('favoriteColor', 'blue');
+
+store.getItem('favoriteColor'); // returns 'blue'
+
+
+store.favoriteColor = 'red';
+
+store.favoriteColor; // returns 'red'
+```
+
 ---------------------------------------
 
 ### MirrorStore.getItem(key) 
