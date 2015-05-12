@@ -8,6 +8,7 @@
 <body>
 <script>
     'use strict';
+
     var store = getMirror();
 
     console.log('Saved color', store.favoriteColor); // logs undefined on first load and 'red' on consecutive reloads
@@ -18,6 +19,9 @@
 
     store.favoriteColor = 'red';
     console.log(store.favoriteColor); // logs 'red'
+
+    // get new ref to store
+    console.log(getMirror().favoriteColor); // logs 'red'
 </script>
 </body>
 </html>
