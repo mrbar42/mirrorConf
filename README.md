@@ -38,6 +38,12 @@ If you encounter a bug or you have a suggestion - create an issue or submit a pu
 
 ## Usage
 
+```html
+<!-- the script will expose getMirror and clearMirrors to window global object -->
+<script src='mirrorConf'></script>
+```
+
+
 ### getMirror([name] [, opt]) 
 
 Create a new store or get reference if it already exists.
@@ -63,7 +69,7 @@ var anotherStore = getMirror('myDifferentStore');
 anotherStore.favoriteColor; // returns undefined
 
 ```
-
+---------------------------------------
 
 ### clearMirrors() 
 
