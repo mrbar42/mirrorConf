@@ -5,6 +5,18 @@
     var _storesData = {};
     var prefix = '_MC_';
 
+    var lsTest = function (){
+        var test = '_____test';
+        try {
+            localStorage.setItem(test, test);
+            localStorage.removeItem(test);
+            return true;
+        } catch(e) {
+            return false;
+        }
+    };
+
+
     var quit = function (e) {
         localStorage.setItem(prefix + this.__name__, JSON.stringify(this));
     };
@@ -119,6 +131,11 @@
     window.getMirror = function (name, opt) {
         name = name || 'Default';
         opt = opt || {};
+
+        if (!lsTest) {
+            console.warn('localStorage is disabled');
+            return {}
+        }
 
         if (_stores[name]) {
             return _stores[name]
