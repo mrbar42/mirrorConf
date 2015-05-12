@@ -9,7 +9,7 @@ the only ways to get rid of the persistence is to externally remove the localSto
 
 
 
-If you encounter a bug or you have a suggestion - create am issue or submit a pull request
+If you encounter a bug or you have a suggestion - create an issue or submit a pull request
 
 ## Quick Examples
 
@@ -37,7 +37,6 @@ If you encounter a bug or you have a suggestion - create am issue or submit a pu
 
 
 ## Usage
----------------------------------------
 
 ### getMirror([name] [, opt]) 
 
@@ -81,12 +80,11 @@ clearMirrors();
 
 // already declared stores are not affected
 store.favoriteColor; // returns 'blue'
-
+```
 
 
 
 ## Methods
----------------------------------------
 
 ### MirrorStore.setItem(key, value) 
 
