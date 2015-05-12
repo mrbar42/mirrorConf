@@ -40,7 +40,7 @@ If you encounter a bug or you have a suggestion - create an issue or submit a pu
 
 ```html
 <!-- the script will expose getMirror and clearMirrors to window global object -->
-<script src='mirrorConf'></script>
+<script src='mirrorConf.js'></script>
 ```
 
 
