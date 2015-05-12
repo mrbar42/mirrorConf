@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="mirrorConf.js"></script>
+</head>
+<body>
+<script>
+    'use strict';
+    var store = getMirror();
+
+    console.log('Saved color', store.favoriteColor); // logs undefined on first load and 'red' on consecutive reloads
+
+    store.setItem('favoriteColor', 'blue');
+    console.log(store.favoriteColor); // logs 'blue'
+
+
+    store.favoriteColor = 'red';
+    console.log(store.favoriteColor); // logs 'red'
+</script>
+</body>
+</html>
