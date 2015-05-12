@@ -17,7 +17,7 @@
     };
 
 
-    var quit = function (e) {
+    var quit = function () {
         localStorage.setItem(prefix + this.__name__, JSON.stringify(this));
     };
 
@@ -79,7 +79,7 @@
      * @param {*} value
      * @param {function} [cb] callback to invoke when the item was actually saved
      */
-    addMethod(MirrorStore, 'setItem', function (key, value, cb) {
+    addMethod(MirrorStore, 'setItem', function (key, value) {
         if (!this[key]) {
             addProp(this, key, value);
         }
@@ -129,8 +129,9 @@
      * @returns {Object} MirrorStore instance
      */
     window.getMirror = function (name, opt) {
-        name = name || 'Default';
-        opt = opt || {};
+        opt = opt || typeof name == 'object' && name || {};
+        name = typeof name == 'string' && name || 'Default';
+
 
         if (!lsTest) {
             console.warn('localStorage is disabled');
