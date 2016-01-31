@@ -231,7 +231,6 @@ store.notifications = []
 // pseudo server function
 fetchNotification(function (array) {
     store.notifications.push(array);
+    store.save();
 })
-
-store.save();
 ```
